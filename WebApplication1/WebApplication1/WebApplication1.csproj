@@ -67,24 +67,48 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Administrator\administratorLogin\administratorLogin.aspx" />
-    <Content Include="Administrator\administratorLogin\administratorLogin.html" />
+    <Content Include="Administrator\administratorLogin\aspx\administratorLogin.aspx" />
+    <Content Include="Administrator\administratorLogin\aspx\AdminLog.aspx" />
+    <Content Include="Administrator\administratorLogin\html\administratorLogin.html" />
     <Content Include="Administrator\administratorLogin\css\font-awesome-4.7.0\css\font-awesome.min.css" />
     <Content Include="Administrator\administratorLogin\css\style.css" />
     <Content Include="Administrator\administratorLogin\images\bg.png" />
     <Content Include="Administrator\administratorLogin\js\administratorLogin.js" />
+    <Content Include="Administrator\administratorLogin\js\administratorLogin1.js" />
     <Content Include="Administrator\administratorLogin\js\index.js" />
     <Content Include="Administrator\administratorLogin\js\jquery.min.js" />
+    <Content Include="User\UserLogin\css\font-awesome.min.css" />
+    <Content Include="User\UserLogin\js\index.js" />
+    <Content Include="User\UserLogin\js\jquery.min.js" />
+    <Content Include="User\UserLogin\js\UserLogin.js" />
+    <Content Include="User\UserLogin\css\style.css" />
+    <Content Include="User\UserLogin\js\test_register.js" />
+    <Content Include="User\UserLogin\aspx\user_login.aspx" />
+    <Content Include="User\UserLogin\html\user_login.html" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator\administratorLogin\administratorLogin.aspx.cs">
+    <Compile Include="Administrator\administratorLogin\aspx\administratorLogin.aspx.cs">
       <DependentUpon>administratorLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administrator\administratorLogin\administratorLogin.aspx.designer.cs">
+    <Compile Include="Administrator\administratorLogin\aspx\administratorLogin.aspx.designer.cs">
       <DependentUpon>administratorLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\administratorLogin\aspx\AdminLog.aspx.cs">
+      <DependentUpon>AdminLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\administratorLogin\aspx\AdminLog.aspx.designer.cs">
+      <DependentUpon>AdminLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserLogin\aspx\user_login.aspx.cs">
+      <DependentUpon>user_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserLogin\aspx\user_login.aspx.designer.cs">
+      <DependentUpon>user_login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -105,10 +129,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Administrator\administratorLogin\aspx\" />
-    <Folder Include="Administrator\administratorLogin\html\" />
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="User\UserLogin\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

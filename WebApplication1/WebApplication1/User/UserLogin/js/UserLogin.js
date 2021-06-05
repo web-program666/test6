@@ -1,7 +1,7 @@
 ﻿function cookies() {
     //var oForm = document.getElementsById("button");
-    var oUser = document.getElementById('name');
-    var oPswd = document.getElementById('pass');
+    var oUser = document.getElementById('cardId');
+    var oPswd = document.getElementById('password');
     var oRemember = document.getElementById('remember');
     //页面初始化时，如果帐号密码cookie存在则填充
     if (getCookie('username') && getCookie('password')) {
@@ -49,22 +49,20 @@ function delCookie(name) {
 };
 
 function pass_verify() {     //验证
-    var name = document.getElementById("name").value;
-    var password = document.getElementById("pass").value;
-    if (name == '' || password == '' || name == undefined || password == undefined || name == null || password == null)
-    {
+    var cardId = document.getElementById("cardId").value;
+    var password = document.getElementById("password").value;
+    if (cardId == '' || password == '' || cardId == undefined || password == undefined || cardId == null || password == null) {
         alert("请输入用户名或密码！");
-        document.getElementById("name").value = "";
-        document.getElementById("pass").value="";
+        location.reload();
     }
     else {
         if (isNumber(password)) {
             submit();
         }
         else {
-            
+
             alert("密码必须全为数字！");
-            document.getElementById("pass").value = "";
+            location.reload();
 
         }
     }
@@ -72,44 +70,12 @@ function pass_verify() {     //验证
 function isNumber(value) {         //验证是否为数字
     var patrn = /^(-)?\d+(\.\d+)?$/;
     if (patrn.exec(value) == null || value == "") {
-        return false 
+        return false
     }
     else {
         return true
     }
-    
-}
-function submit() {     //ajax传表单
-    var name = document.getElementById("name").value;
-    var password = document.getElementById("pass").value;
-    var XmlHttp = new XMLHttpRequest();
-    var form = new FormData();
-    form.append("name", name);    //创建表单
-    form.append("password", password);//创建表单
-    XmlHttp.open("Post", "../aspx/administratorLogin.aspx", true);
-    XmlHttp.onreadystatechange = function () {
-        if (XmlHttp.readyState == 4 && XmlHttp.status == 200) {
-            flag = XmlHttp.responseText;
-            result(flag);
-        }
-    };   //异步
-    XmlHttp.send(form);
+
 }
 
-function result(flag) {
-    if (flag == 1) {
-        alert("登陆成功！");
-        window.location.href = "#"; //跳转到管理员操作界面
-    }
-    else if (flag == -1) {
-        alert("账户不存在!");
-        document.getElementById("name").value = "";
-        document.getElementById("pass").value = "";
-    }
-    else {
-        alert("账户或密码错误！");
-        document.getElementById("name").value = "";
-        document.getElementById("pass").value = "";
-    }
-}
 

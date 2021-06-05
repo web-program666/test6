@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        #checkbox { /*记住密码框格式*/
+            position: relative;
+            right: 215px;
+            top: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div class="materialContainer">
+        <div class="box">
+            <div class="title">登录</div>
+            <div class="input">
+                <label for="cardId">卡号</label>
+                <input type="text" name="cardId" id="cardId">
+                <span class="spin"></span>
+            </div>
+            <div class="input">
+                <label for="password">密码</label>
+                <input type="password" name="password" id="password" maxlength="6">
+                <span class="spin"></span>
+            </div>
+            <label id="checkbox">
+                <input type="checkbox" id="remember"> 记住密码     <!--记住密码-->
+            </label>
+            <div class="button login">
+                <button onclick="pass_verify()" type="button">
+                    <span>登录</span>
+                    <i class="fa fa-check"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/test_register.js"></script>
+    <script src="../js/UserLogin.js"></script>
+    <script>cookies()</script>
+</body>
+</html>
