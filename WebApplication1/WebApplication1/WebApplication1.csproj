@@ -67,16 +67,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrator\administratorLogin\administratorLogin.aspx" />
+    <Content Include="Administrator\administratorLogin\administratorLogin.html" />
+    <Content Include="Administrator\administratorLogin\css\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Administrator\administratorLogin\css\style.css" />
+    <Content Include="Administrator\administratorLogin\images\bg.png" />
+    <Content Include="Administrator\administratorLogin\js\administratorLogin.js" />
+    <Content Include="Administrator\administratorLogin\js\index.js" />
+    <Content Include="Administrator\administratorLogin\js\jquery.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\administratorLogin\administratorLogin.aspx.cs">
+      <DependentUpon>administratorLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\administratorLogin\administratorLogin.aspx.designer.cs">
+      <DependentUpon>administratorLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrator\administratorLogin\css\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Administrator\administratorLogin\css\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Administrator\administratorLogin\css\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Administrator\administratorLogin\css\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -86,6 +105,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Administrator\administratorLogin\aspx\" />
+    <Folder Include="Administrator\administratorLogin\html\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
