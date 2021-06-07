@@ -23,7 +23,7 @@ function login() {
                     var str = xht.responseText;
                     if (str == "1") {
                         alert("注册成功！");
-                        window.location.href = "https://sale.vmall.com/618new.html?cid=10618";
+                        location.reload();
                     }
                     else {
                         alert(str);

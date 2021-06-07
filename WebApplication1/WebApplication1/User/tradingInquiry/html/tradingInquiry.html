@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+                @import url(http://fonts.googleapis.com/css?family=Raleway);
+
+                * {
+                    font-family: "Raleway", sans-serif, sans;
+                    margin: 0;
+                    padding: 0;
+                }
+/*
+                body {
+                    background: #46d1a3;
+                }*/
+
+                #m,
+                #m th,
+                #m td {
+                    /*border-collapse: collapse; */
+                    padding: 0.8rem;
+                    border-radius: 5px;
+                }
+
+                #m {
+                    margin: 30px auto;
+                    background: #61687c;
+                }
+
+                    #m tr:nth-child(1n) {
+                        opacity: 0;
+                        /* To center just the first column */
+                    }
+
+                    #m tr td:first-child {
+                        text-align: center;
+                    }
+
+                    #m tr:nth-child(2n) {
+                        background: #c4c4c4;
+                        text-align: center;
+                    }
+
+                    #m tr:nth-child(2n - 1) {
+                        background: #fff;
+                        text-align: center;
+                        /*#m tr:first-child th:first-child {
+          border-top-left-radius: 15px;
+        }*/
+                    }
+
+                #rerun {
+                    width: 100px;
+                    height: 30px;
+                    font-size: 1.1em;
+                    border-radius: 5px;
+                    margin: 10px;
+                }
+
+
+    </style>
+</head>
+
+<body  background="bann1.jpg">
+    <script type="text/javascript" src="https://wow.techbrood.com/libs/jquery/jquery-2.1.1.min.js"></script><button id="rerun">Run again</button>
+    <table id="m"></table>
+    <script src="../js/tradingInquiry.js"></script>
+
+    <script>
+        var rows = 0;
+        var fadeTime = 700;
+        var delayTime = 50;
+        var animTime = 0;
+
+        submit();//ajax请求数据并返回
+
+        $(window).load(function () {
+
+            $("#rerun").click(function () {
+                //Disable button until animation complete to avoid bug
+                $(this).attr("disabled", true);
+                setTimeout(function () {
+                    enableClick($("#rerun"))
+                }, animTime);
+
+                //Set opacity to 0 and run it again
+                $("#m tr:nth-child(1n)").css("opacity", 0);
+                animateTable();
+            });
+            rows = $("#m tr").length;
+            animTime = (rows * delayTime) + fadeTime + 100;
+            //+100 for margin
+
+            //make button unclickable for 2s so animation can finish
+            $("#rerun").attr("disabled", true);
+            setTimeout(function () {
+                enableClick($("#rerun"))
+            }, animTime);
+
+            animateTable();
+        });
+
+        //Loop through all table rows and fade them in
+        var animateTable = function (i, rows) {
+            (function next(i) {
+                if (i++ >= rows) return;
+                setTimeout(function () {
+                    $("#m tr:nth-child(" + i + ")").fadeTo(fadeTime, 0.7);
+                    next(i);
+                }, delayTime);
+            })(0, rows);
+        }
+
+        //The button to rerun animation
+
+        //Make button clickable again
+        var enableClick = function (ele) {
+            $(ele).removeAttr("disabled");
+        }
+           
+    </script>
+
+
+</body>
+
+</html>
