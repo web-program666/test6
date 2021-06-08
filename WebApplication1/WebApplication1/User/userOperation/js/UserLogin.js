@@ -34,7 +34,7 @@ function isNumber(value) {         //验证是否为数字
 
 
 
-function cookies() {
+function cookies() {      //记住密码
     //var oForm = document.getElementsById("button");
     var oUser = document.getElementById('cardId');
     var oPswd = document.getElementById('password');
@@ -43,15 +43,15 @@ function cookies() {
     var isLogin=false;
 
     //页面初始化时，如果帐号密码cookie存在则填充
-    if (getCookie('cardId') && getCookie('password')) {
-        oUser.value = getCookie('cardId');
+    if (getCookie('cardId1') && getCookie('password')) {
+        oUser.value = getCookie('cardId1');
         oPswd.value = getCookie('password');
         oRemember.checked = true;
     }
     //复选框勾选状态发生改变时，如果未勾选则清除cookie
     oRemember.onchange = function () {
         if (!this.checked) {
-            delCookie('cardId');
+            delCookie('cardId1');
             delCookie('password');
         }
     };
@@ -60,7 +60,7 @@ function cookies() {
         //var obj = event.srcElement;
         //if (obj.type == "submit") {
             if (oRemember.checked) {
-                setCookie('cardId', oUser.value, 7); //保存帐号到cookie，有效期7天
+                setCookie('cardId1', oUser.value, 7); //cardId1  为了和鉴别登录状态的cookie区别
                 setCookie('password', oPswd.value, 7); //保存密码到cookie，有效期7天
         }
         pass_verify();   //点击登录按钮  执行ajax

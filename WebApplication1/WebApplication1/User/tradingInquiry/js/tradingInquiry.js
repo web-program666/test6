@@ -1,21 +1,26 @@
 ﻿function submit() {     //ajax传表单
-    var cardId =1;             //cardId数值
-    var XmlHttp = new XMLHttpRequest();
-    var form = new FormData();
-    form.append("cardId", cardId);    //创建表单
-    XmlHttp.open("Post", "../aspx/tradingInquiry.aspx",false);  //同步
-    XmlHttp.send(form);
-    text = XmlHttp.responseText;
-    print(text);//处理返回的json
-    //XmlHttp.onreadystatechange = function () {
-    //    if (XmlHttp.readyState == 4 && XmlHttp.status == 200) {
-    //        text = XmlHttp.responseText;
-    //        return print(text);//处理返回的json
-    //    }
-    //};   //异步
-    //XmlHttp.send(form);
+    if (get_cookie("cardId")) {
+        var cardId = get_cookie("cardId");             //cardId数值
+        var XmlHttp = new XMLHttpRequest();
+        var form = new FormData();
+        form.append("cardId", cardId);    //创建表单
+        XmlHttp.open("Post", "/User/tradingInquiry/aspx/tradingInquiry.aspx", false);  //同步
+        XmlHttp.send(form);
+        text = XmlHttp.responseText;
+        print(text);//处理返回的json
+        //XmlHttp.onreadystatechange = function () {
+        //    if (XmlHttp.readyState == 4 && XmlHttp.status == 200) {
+        //        text = XmlHttp.responseText;
+        //        return print(text);//处理返回的json
+        //    }
+        //};   //异步
+        //XmlHttp.send(form);
+    }
+    else {
+        window.location.href = "/User/userOperation/html/index.html";   //判断用户是否登录
+        window.event.returnValue = false; 
+    }
 }
-
 
 function print(text) {    //数据显示
     data = eval("(" + text + ")"); //将字符串转换为json

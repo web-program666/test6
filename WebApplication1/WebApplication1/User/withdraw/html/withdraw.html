@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>withdraw</title>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- //Meta tags -->
+    <!--主要页面设计CSS-->
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" /> <!--Style-CSS-->
+    <!--<link href="css/font-awesome.css" rel="stylesheet">--><!-- font-awesome-icons -->
+ 
+</head>
+<body background="../images/2.jpg">
+    <section class="w3l-form-36 ">
+        <div class="form-36-mian section-gap center-in-center"style="left:361px;right:361px">   <!--两个类共同控制div格式-->
+            <div class="wrapper">
+                <div class="form-inner-cont">
+                    <h3>请进行取款操作</h3>
+                    <form  class="signin-form">
+                        <div class="form-input">
+                            <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                            <!--取款金额输入框-->
+                            <input type="text" name="withdraw" id="withdraw" placeholder="请输入取款金额" required />
+
+                        </div>
+                        <div class="form-input">
+                            <span class="fa fa-key" aria-hidden="true"></span>
+                            <!--卡密码输入框-->
+                            <input type="password" name="password" id="password" placeholder="请输入卡密码" required />
+                        </div>
+                        <br/>
+                        <span >请选择是否邮箱发送信息 </span>
+                        <input type="radio" style="-webkit-appearance:radio;" value="yes" name="email" id="emailYes"/>是
+                        <input type="radio" style="-webkit-appearance:radio;" value="yes" name="email"id="emailNo"/>否
+                        <div class="login-remember d-grid">
+                            <!--取款按钮-->
+                            <button class="btn theme-button"   onclick="withdrawal()">确认取款</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/withdraw.js"></script>
+    <script src="/User/state.js"></script>  
+</body>
+
+</html>

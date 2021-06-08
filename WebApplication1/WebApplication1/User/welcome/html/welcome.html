@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>用户操作界面</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <!-- //Meta-Tags -->
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!--bootstrap-css-->
+    <link href="../css/font-awesome.css" rel="stylesheet"> <!--font-awesome-css-->
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" /><!--style-sheet-->
+    <link href='../css/aos.css' rel='stylesheet prefetch' type="text/css" media="all" /><!--Animation-effects-css-->
+</head>
+<body>
+    <!--欢迎按钮-->
+    <div class="header-top-agileits">
+        <div class="container">
+            <ul class="agile_forms" data-aos="fade-left">
+                <li><a><i class="fa fa-sign-in" aria-hidden="true"></i>欢迎</a> </li>
+            </ul>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!--banner end here-->
+    <!-- 账户余额界面 -->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="signin-form profile">
+                        <h3 class="agileinfo_sign">账户余额：<span id="balance" name="balance1" style="color:black"></span> 元</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Modal2 -->
+    <!--services -->
+    <div class="services-agileits" id="services">
+        <div class="container">
+            <div class="tittle-agileinfo">
+                <span></span>
+                <h3>请选择业务</h3>
+                <p>please select next step</p>
+            </div>
+            <div class="services-agileits-w3layouts">
+                <div class="col-md-3 service-grids" onclick="show1()">
+                    <a class="active" href="#" data-toggle="modal" data-target="#myModal3">
+                        <i class="fa fa-money" aria-hidden="true" data-aos="zoom-in"></i>
+                        <p class="para-agileits-w3layouts">Balance</p>
+                        <h4>余额查询</h4>
+                    </a>
+                </div>
+                <div class="col-md-3 service-grids" onclick="javascript: window.location.href = '/User/tradingInquiry/html/tradingInquiry.html';window.event.returnValue = false; ">
+                    <a href="">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true" data-aos="zoom-out"></i>
+                        <p class="para-agileits-w3layouts">Bill</p>
+                        <h4>流水查询</h4>
+                    </a>
+                </div>
+                <div class="col-md-3 service-grids" onclick="javascript: window.location.href = '/User/deposit/html/deposit.html';window.event.returnValue = false; ">
+                    <a href="">
+                        <i class="fa fa-line-chart" aria-hidden="true" data-aos="zoom-out"></i>
+                        <p class="para-agileits-w3layouts">Deposit</p>
+                        <h4>存款</h4>
+                    </a>
+                </div>
+                <div class="col-md-3 service-grids" onclick="javascript: window.location.href = '/User/withdraw/html/withdraw.html';window.event.returnValue = false; ">
+                    <a href="">
+                        <i class="fa fa-area-chart" aria-hidden="true" data-aos="zoom-in" ></i>
+                        <p class="para-agileits-w3layouts">Withdraw</p>
+                        <h4>取款</h4>
+                    </a>
+                </div>
+                <div class="col-md-3 service-grids" onclick="javascript: window.location.href = '/User/transfer/html/transfer.html';window.event.returnValue = false; ">
+                    <a href="">
+                        <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                        <p class="para-agileits-w3layouts">Transfer</p>
+                        <h4>转账</h4>
+                    </a>
+                </div>
+                <div class="col-md-3 service-grids" onclick="report()">
+                    <a href="">
+                        <i class="fa fa-bookmark-o" aria-hidden="true" data-aos="zoom-in"></i>
+                        <p class="para-agileits-w3layouts">Report</p>
+                        <h4>挂失</h4>
+                    </a>
+                </div>
+                <div class="col-md-3 service-grids" onclick="javascript: window.location.href = '/User/userOperation/html/index.html';window.event.returnValue = false; ">
+                    <a href="">
+                        <i class="fa fa-users" aria-hidden="true" data-aos="zoom-out"></i>
+                        <p class="para-agileits-w3layouts">Exit</p>
+                        <h4>退出</h4>
+                    </a>
+                </div>
+                <img src="../images/services1.png" class="img-responsive" data-aos="slide-up" alt="" />
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../show/js/show.js"></script>  <!--余额查询-->
+    <!-- //services -->
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <!-- Animation-effect -->
+    <script src='../js/aos.js'></script>
+    <script src="../js/aosindex.js"></script>
+    <!-- //Animation-effect -->
+    <script src="../js/bootstrap.js"></script>
+    <script src='../js/shuzi.js'></script>
+    <script src="../js/test_register.js"></script>
+    <script src="../js/UserLogin.js"></script>
+    <script>cookies()</script>    <!--记住密码-->
+    <script src="../../accFreeze/js/accFreeze.js"></script>  <!--冻结挂失-->
+    <script src="../../state.js"></script>
+    <script>
+        if (!get_cookie("cardId")) {
+            window.location.href = "/User/userOperation/html/index.html";   //判断用户是否登录
+            /*window.event.returnValue = false; */ 
+        }
+    </script>
+    <script>
+        function exit() {   //退出
+            var reg = RegExp(cardId + '=([^;]+)');
+        }
+    </script>
+</body>
+</html>

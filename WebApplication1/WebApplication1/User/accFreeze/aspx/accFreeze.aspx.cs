@@ -14,7 +14,6 @@ namespace WebApplication1.User.accFreeze.aspx
         protected void Page_Load(object sender, EventArgs e)
         {
             string cardId = Request["cardId"].ToString();
-            //string cardId = "1";
             try
             {
                 SqlConnection conn = new SqlConnection(@"server =.; user id = sa; password =123456; database = Web");

@@ -20,14 +20,9 @@
 function result(flag) {
     if (flag == 1) {
         alert("登陆成功！");
+        window.location.href = "/User/welcome/html/welcome.html";//跳转
+        window.event.returnValue = false;  
         
-        window.location.href = "#"  //跳转
-        /*document.getElementById("state").innerText = "已登录";*/
-        
-    //    window.location.href = "/User/tradingInquiry/html/tradingInquiry.html"; //跳转到管理员操作界面
-
-
-
     }
     else if (flag == -1) {
         alert("账户不存在!");

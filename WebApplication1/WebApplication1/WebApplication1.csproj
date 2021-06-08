@@ -79,12 +79,53 @@
     <Content Include="Administrator\administratorLogin\js\jquery.min.js" />
     <Content Include="User\accFreeze\aspx\accFreeze.aspx" />
     <Content Include="User\accFreeze\js\accFreeze.js" />
+    <Content Include="User\deposit\ASPX\deposit.aspx" />
+    <Content Include="User\deposit\css\style.css" />
+    <Content Include="User\deposit\html\deposit.html" />
+    <Content Include="User\deposit\images\2.jpg" />
+    <Content Include="User\deposit\images\services-bg.jpg" />
+    <Content Include="User\deposit\js\deposit.js" />
+    <Content Include="User\show\aspx\show.aspx" />
+    <Content Include="User\tradingInquiry\js\jquery.min.js" />
+    <Content Include="User\welcome\css\aos.css" />
+    <Content Include="User\welcome\css\bootstrap.css" />
+    <Content Include="User\welcome\css\circles.css" />
+    <Content Include="User\welcome\css\easy-responsive-tabs.css" />
+    <Content Include="User\welcome\css\flexslider.css" />
+    <Content Include="User\welcome\css\font-awesome.css" />
+    <Content Include="User\welcome\css\style.css" />
+    <Content Include="User\welcome\fonts\fontawesome-webfont.svg" />
+    <Content Include="User\welcome\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="User\welcome\html\welcome.html" />
+    <Content Include="User\welcome\images\services-bg.jpg" />
+    <Content Include="User\welcome\images\services1.png" />
+    <Content Include="User\welcome\js\aos.js" />
+    <Content Include="User\welcome\js\aosindex.js" />
+    <Content Include="User\welcome\js\bootstrap.js" />
+    <Content Include="User\welcome\js\circles.js" />
+    <Content Include="User\welcome\js\easing.js" />
+    <Content Include="User\welcome\js\jquery-2.1.4.min.js" />
+    <Content Include="User\welcome\js\jquery.flexslider.js" />
+    <Content Include="User\welcome\js\jzBox.js" />
+    <Content Include="User\welcome\js\launcher.js" />
+    <Content Include="User\welcome\js\main.js" />
+    <Content Include="User\welcome\js\move-top.js" />
+    <Content Include="User\show\js\show.js" />
+    <Content Include="User\welcome\js\slideshow.min.js" />
+    <Content Include="User\state.js" />
+    <Content Include="User\transfer\aspx\transfer.aspx" />
+    <Content Include="User\transfer\css\style.css" />
+    <Content Include="User\transfer\html\transfer.html" />
+    <Content Include="User\transfer\images\2.jpg" />
+    <Content Include="User\transfer\images\services-bg.jpg" />
+    <Content Include="User\transfer\js\transfer.js" />
     <Content Include="User\userInfo\aspx\userInfo.aspx" />
     <Content Include="User\tradingInquiry\aspx\tradingInquiry.aspx" />
     <Content Include="User\tradingInquiry\html\bann1.jpg" />
     <Content Include="User\tradingInquiry\html\tradingInquiry.html" />
     <Content Include="User\tradingInquiry\js\tradingInquiry.js" />
-    <Content Include="User\userInfo\html\HtmlPage1.html" />
+    <Content Include="User\userInfo\html\information.html" />
+    <Content Include="User\userInfo\images\bann1.jpg" />
     <Content Include="User\userInfo\js\userInfo.js" />
     <Content Include="Global.asax" />
     <Content Include="User\userOperation\aspx\user_login.aspx" />
@@ -116,6 +157,12 @@
     <Content Include="User\userOperation\js\slideshow.min.js" />
     <Content Include="User\userOperation\js\test_register.js" />
     <Content Include="User\userOperation\js\UserLogin.js" />
+    <Content Include="User\withdraw\aspx\withdraw.aspx" />
+    <Content Include="User\withdraw\css\style.css" />
+    <Content Include="User\withdraw\html\withdraw.html" />
+    <Content Include="User\withdraw\images\2.jpg" />
+    <Content Include="User\withdraw\images\services-bg.jpg" />
+    <Content Include="User\withdraw\js\withdraw.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -133,12 +180,34 @@
     <Compile Include="Administrator\administratorLogin\aspx\AdminLog.aspx.designer.cs">
       <DependentUpon>AdminLog.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EMAIL.cs" />
     <Compile Include="User\accFreeze\aspx\accFreeze.aspx.cs">
       <DependentUpon>accFreeze.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\accFreeze\aspx\accFreeze.aspx.designer.cs">
       <DependentUpon>accFreeze.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\deposit\ASPX\deposit.aspx.cs">
+      <DependentUpon>deposit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\deposit\ASPX\deposit.aspx.designer.cs">
+      <DependentUpon>deposit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\show\aspx\show.aspx.cs">
+      <DependentUpon>show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\show\aspx\show.aspx.designer.cs">
+      <DependentUpon>show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\transfer\aspx\transfer.aspx.cs">
+      <DependentUpon>transfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\transfer\aspx\transfer.aspx.designer.cs">
+      <DependentUpon>transfer.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\userInfo\aspx\userInfo.aspx.cs">
       <DependentUpon>userInfo.aspx</DependentUpon>
@@ -165,6 +234,13 @@
     <Compile Include="User\userOperation\aspx\user_login.aspx.designer.cs">
       <DependentUpon>user_login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User\withdraw\aspx\withdraw.aspx.cs">
+      <DependentUpon>withdraw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\withdraw\aspx\withdraw.aspx.designer.cs">
+      <DependentUpon>withdraw.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrator\administratorLogin\css\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
@@ -181,6 +257,15 @@
     <Content Include="User\userOperation\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="User\userOperation\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="User\userOperation\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="User\welcome\fonts\fontawesome-webfont.eot" />
+    <Content Include="User\welcome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="User\welcome\fonts\fontawesome-webfont.woff" />
+    <Content Include="User\welcome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="User\welcome\fonts\FontAwesome.otf" />
+    <Content Include="User\welcome\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="User\welcome\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="User\welcome\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="User\welcome\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -193,7 +278,6 @@
     <Folder Include="User\tradingInquiry\css\" />
     <Folder Include="User\tradingInquiry\images\" />
     <Folder Include="User\userInfo\css\" />
-    <Folder Include="User\userInfo\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

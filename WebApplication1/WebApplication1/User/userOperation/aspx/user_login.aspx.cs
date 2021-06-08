@@ -17,6 +17,8 @@ namespace 大作业
             SqlConnection conn = new SqlConnection("server=.;user id=sa;password=123456;Database=Web");
             string cardId = Request["cardId"];//接收用户输入的卡号
             int password = Convert.ToInt32(Request["password"].ToString());//将密码转化为int型
+            //string cardId = "1";
+            //int password = 111111;
             string sql=string.Format("SELECT password FROM [card] where cardId='{0}'", cardId);//根据用户输入的卡号找出对应密码
             SqlCommand cmd = new SqlCommand(sql, conn);//SqlCommand对象用于只与SQL Server建立连接后执行特定的语句,比如INSERT,DELETE,UPDATE等等这样的命令.
             conn.Open();     //打开连接
@@ -41,7 +43,7 @@ namespace 大作业
                     if (password == Convert.ToInt32(password_sql))
                     {
                         Response.Write("1");//账号密码正确，登录成功
-                                            //Response.Redirect("../html/index.html");
+                        setCookie(cardId);    //向前端传cookie
                         Response.End();
                     }
                     if (password != Convert.ToInt32(password_sql))
@@ -52,6 +54,12 @@ namespace 大作业
                 }
             }
             conn.Close();
+        }
+        public void setCookie(string cardId)
+        {
+            HttpCookie newCookie = new HttpCookie("cardId");
+            newCookie.Value = cardId;
+            Response.AppendCookie(newCookie);
         }
     }
 }

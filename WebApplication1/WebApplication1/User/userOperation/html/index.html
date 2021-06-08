@@ -17,7 +17,7 @@
 	<div class="header-top-agileits">
 		<div class="container">
 			<ul class="agile_forms" data-aos="fade-left">
-				<li ><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in" aria-hidden="true"></i><span id="state">登录</span></a> </li>
+				<li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in" aria-hidden="true"></i><span id="state">登录</span></a> </li>
 			</ul>
 			<div class="clearfix"> </div>
 		</div>
@@ -35,10 +35,10 @@
 						<div class="login-form">
 							<form>
 								<input type="text" placeholder="卡号" required="" id="cardId">
-								<input type="password" placeholder="密码"  id="password">
+								<input type="password" placeholder="密码" id="password">
 								<input type="checkbox" id="remember">记住密码         <!--记住密码-->
 								<div class="tp">
-									<input type="submit" value="登录"  id="submit"/>
+									<input type="submit" value="登录" id="submit" onclick="pass_verify()"/>
 								</div>
 							</form>
 						</div>
@@ -56,7 +56,7 @@
 				<h3>请选择业务</h3>
 				<p>please select next step</p>
 			</div>
-			<div class="services-agileits-w3layouts">
+			<div class="services-agileits-w3layouts"  onclick="get_cookie('cardId')">
 				<div class="col-md-3 service-grids">
 					<i class="fa fa-money" aria-hidden="true" data-aos="zoom-in"></i>
 					<p class="para-agileits-w3layouts">Balance</p>
@@ -82,10 +82,10 @@
 					<p class="para-agileits-w3layouts">Transfer</p>
 					<h4>转账</h4>
 				</div>
-				<div class="col-md-3 service-grids" onclick="report()">
+				<div class="col-md-3 service-grids" >
 					<i class="fa fa-bookmark-o" aria-hidden="true" data-aos="zoom-in"></i>
 					<p class="para-agileits-w3layouts">Report</p>
-					<h4 >挂失</h4>
+					<h4>挂失</h4>
 				</div>
 				<div class="col-md-3 service-grids">
 					<i class="fa fa-users" aria-hidden="true" data-aos="zoom-out"></i>
@@ -97,20 +97,18 @@
 			</div>
 		</div>
 	</div>
+	<script src="/User/state.js"></script>
+	<script>
+
+	</script>   
 	<script src="../js/test_register.js"></script>
 	<script src="../js/UserLogin.js"></script>
 	<script>cookies()</script>    <!--记住密码-->
-	<!-- //services -->
 	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
-	<!-- Animation-effect -->
 	<script src='../js/aos.js'></script>
 	<script src="../js/aosindex.js"></script>
-	<!-- //Animation-effect -->
 	<script src="../js/bootstrap.js"></script>
-	<!--<script src='js/shuzi.js'></script>-->
-	<!--<script src="../../../session/session.js"></script>
-	<script>userSession()</script>-->
-	<script src="../../accFreeze/js/accFreeze.js"></script>  <!--冻结挂失-->
+
 
 </body>
 </html>
