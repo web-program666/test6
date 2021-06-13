@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>用户模板</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- site css -->
+    <link rel="stylesheet" href="../style.css" />
+
+</head>
+<body class="inner_page widgets">
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- 左侧消息框  -->
+            <nav id="sidebar">
+                <div class="sidebar_blog_1">
+                    <div class="sidebar_user_info">
+                        <div class="icon_setting"></div>
+                        <div class="user_profle_side">
+                            <div class="user_img"><img class="img-responsive" id="img1" alt="#" /></div>
+                            <div class="user_info">
+                                <h6>用户</h6>
+                                <p><span class="online_animation"></span> Online</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar_blog_2">
+                    <h4>用户</h4>
+                    <ul class="list-unstyled components">
+                        <li>
+                            <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-bar-chart-o green_color"></i> <span>用户信息</span></a>
+                            <ul class="collapse list-unstyled" id="element">
+                                <li><a href="/Administrator/setInformation/html/setInfo.html">> <span class="fa fa-table orange_color">基本信息</span></a></li>
+                                <li><a href="/Administrator/trading/html/trading.html"> <span class="fa fa-clock-o orange_color" >交易信息</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../../operation/html/存款.html"><i class="fa fa-briefcase blue1_color"></i> <span>存款</span></a>
+                        </li>
+                        <li>
+                            <a href="../../operation/html/取款.html"><i class="fa fa-object-group blue2_color"></i> <span>取款</span></a>
+                        </li>
+                        <li>
+                            <a href="../../operation/html/转账.html"><i class="fa fa-paper-plane red_color"></i> <span>转账</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="/Administrator/cardIdInput/html/cardIdInput.html"><i class="fa fa-clone yellow_color"></i> <span>退出</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end 左侧消息框 -->
+            <!-- 右侧内容 -->
+            <div id="content">
+                <!-- 顶部 -->
+                <div class="topbar">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="full">
+                            <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                            <div class="right_topbar">
+                                <div class="icon_info">
+                                    <ul class="user_profile_dd">
+                                        <li>
+                                            <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" id="img2" alt="#" /><span class="name_user">用户</span></a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="">个人介绍</a>
+                                                <a class="dropdown-item" href="/Administrator/administratorLogin/html/administratorLogin.html"><span>退出</span> <i class="fa fa-sign-out"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <!-- end 顶部 -->
+                <!-- 标题 -->
+                <div class="midde_cont">
+                    <div class="container-fluid">
+                        <div class="row column_title">
+                            <div class="col-md-12">
+                                <div class="page_title">
+                                    <h2>用户信息</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 中间空白可填充位置 -->
+                        <div class="row column1">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div class="white_shd full margin_bottom_30">
+                                    <div class="full graph_head">
+                                        <div class="heading1 margin_0">
+                                            <h2>用户基本信息</h2>
+                                        </div>
+                                    </div>
+                                    <div class="full price_table padding_infor_info">
+                                        <div class="row">
+                                            <!-- user profile section -->
+                                            <!-- 整个个人介绍页面 -->
+                                            <div class="col-lg-12">
+                                                <div class="full dis_flex center_text">
+                                                    <div class="profile_img"><img width="180" class="rounded-circle" id="img" alt="#" /></div>
+                                                    <div class="profile_contant">
+                                                        <!--电话邮箱等介绍-->
+                                                        <div id="infomation" class="contact_inner">
+
+                                                            <h3><strong>姓名: </strong><span id="name" name="info"></span></h3>
+                                                            <p><strong>身份证号: </strong><span id="ID" name="info"></span></p>
+                                                            <p><strong>卡号: </strong><span id="cardId" name="info"></span></p>
+                                                            <p><strong>余额: </strong><span id="balance" name="info"></span></p>
+                                                            <form>
+                                                                <div>
+                                                                    <span>账号状态：</span>
+                                                                    <!--点击后，触发被点击可选按钮的stateChange事件，-->
+                                                                    <input type="radio" name="state" value="1" />正常   <!--//默认值-->
+                                                                    <input type="radio" name="state" value="0" />冻结
+                                                                    <!--<input id="state1" type="text" class="text" value="数据库" />-->
+                                                                </div>
+                                                                <span>账户密码：</span>
+                                                                <input id="password" type="text" name="info" value="" />
+                                                                <br />
+                                                                <span>电子邮箱：</span>
+                                                                <input id="Email" type="email" onchange="checkEmail()" name="info" value="" />
+                                                                <br />
+                                                                <span>电话号码：</span>
+                                                                <input id="phone" type="tel" value="" onchange="checkPhone()" name="info" />
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 下面给加宽一点的div -->
+                                                <div class="full inner_elements margin_top_30">
+                                                    <div style="text-align:center">
+                                                        <button id="change1" type="button" onclick="submit()" style="width: 140px; height: 40px; border: 0; background-color: #ff5722; color: white ">确认修改信息</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 整个个人介绍页面end -->
+                                            <div class="col-md-2"></div>
+                                        </div>
+                                        <!-- 中间空白可填充位置end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--标题end-->
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/setInfor.js"></script>
+    <script src="../../openAcc/utils.js"></script>
+
+    <script src="../../adminState.js">
+    </script>
+    <script>
+        if (!get_name("name")) {
+            window.location.href = "/Administrator/administratorLogin/html/administratorLogin.html";   //判断管理员是否登录
+            window.event.returnValue = false;  //判断管理员是否登录
+        }
+    </script>
+    <script src="../../photo/getPhoto.js"></script>
+</body>
+</html>

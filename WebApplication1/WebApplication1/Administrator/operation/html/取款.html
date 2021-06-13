@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--上侧按钮栏的格式控制 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- 对整个页面的css的控制 -->
+    <link rel="stylesheet" href="../style.css" />
+</head>
+    <body class="inner_page widgets">
+        <div class="full_container">
+            <div class="inner_container">
+                <!-- 左侧消息框  -->
+                <nav id="sidebar">
+                    <div class="sidebar_blog_1">
+                        <div class="sidebar_user_info">
+                            <div class="icon_setting"></div>
+                            <div class="user_profle_side">
+                                <div class="user_img"><img class="img-responsive" src="../images/layout_img/msg2.png" alt="#" /></div>
+                                <div class="user_info">
+                                    <h6>用户</h6>
+                                    <p><span class="online_animation"></span> Online</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar_blog_2">
+                        <h4>用户</h4>
+                        <ul class="list-unstyled components">
+                            <li>
+                                <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-bar-chart-o green_color"></i> <span>用户信息</span></a>
+                                <ul class="collapse list-unstyled" id="element">
+                                    <li><a href="/Administrator/setInformation/html/setInfo.html">> <span class="fa fa-table orange_color">基本信息</span></a></li>
+                                    <li><a href="/Administrator/trading/html/trading.html">> <span class="fa fa-clock-o orange_color">交易信息</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="存款.html"><i class="fa fa-briefcase blue1_color"></i> <span>存款</span></a>
+                            </li>
+                            <li>
+                                <a href="取款.html"><i class="fa fa-object-group blue2_color"></i> <span>取款</span></a>
+                            </li>
+                            <li>
+                                <a href="转账.html"><i class="fa fa-paper-plane red_color"></i> <span>转账</span></a>
+                            </li>
+                            <li class="active">
+                                <a href="/Administrator/cardIdInput/html/cardIdInput.html"><i class="fa fa-clone yellow_color"></i> <span>退出</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- end 左侧消息框 -->
+                <!-- 右侧内容 -->
+                <div id="content">
+                    <!-- 顶部 -->
+                    <div class="topbar">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <div class="full">
+                                <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                                <div class="right_topbar">
+                                    <div class="icon_info">
+                                        <ul class="user_profile_dd">
+                                            <li>
+                                                <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="../images/layout_img/msg2.png" alt="#" /><span class="name_user">用户</span></a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="">个人介绍</a>
+                                                    <a class="dropdown-item" href="/Administrator/administratorLogin/html/administratorLogin.html"><span>退出</span> <i class="fa fa-sign-out"></i></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- end 顶部 -->
+                    <!-- 标题 -->
+                    <div class="midde_cont">
+                        <div class="container-fluid">
+                            <div class="row column_title">
+                                <div class="col-md-12">
+                                    <div class="page_title">
+                                        <h2>取款</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row -->
+                            <div class="row column1">
+                                <div class="col-md-12">
+                                    <div class="white_shd full margin_bottom_30">
+                                        <div class="full graph_head">
+                                            <div class="heading1 margin_0">
+                                                <h2><small> 填写取款信息 </small></h2>
+                                            </div>
+                                        </div>
+                                        <div class="full price_table padding_infor_info" style="padding-bottom:130px">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="table-responsive-sm">
+                                                        <table class="table table-striped projects">
+                                                            <tr>
+
+                                                                <th style="background-color: white; width: 30%"></th>
+                                                                <th style="text-align: center; width: 40%;height:100px;padding-block-end:20px;background-color:#dddddd"><Font size="6" face="宋体"><strong>取款</strong></Font></th>
+                                                                <th style="background-color: white; width: 30%"></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="background-color:#ffffff" rowspan=3>
+                                                                </td>
+                                                                <td style=" text-align:center;background-color:#dddddd">
+                                                                    <Font size="3" face="宋体">取款金额：</Font><input type="number" id="withdraw" placeholder="请输入取款金额" required style="width: 70%" />
+                                                                </td>
+                                                                <td style="background-color: #ffffff" rowspan=3>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style=" text-align:center;background-color:#dddddd">
+                                                                    <Font size="3" face="宋体">账户密码：</Font><input type="text" id="password" placeholder="请输入账户密码" required style="width: 70%" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style=" text-align:center;background-color:#dddddd">
+                                                                    <button class="btn btn-success btn-xs" style="width: 20%" onclick="withdrawal()"><Font size="4" face="宋体"><strong>确   认</strong></Font></button>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end row -->
+                            </div>
+                        </div>
+                        <!-- end dashboard inner -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--对右上角按钮下拉的控制-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/withdraw.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../../adminState.js"></script>
+
+    </body>
+</html>

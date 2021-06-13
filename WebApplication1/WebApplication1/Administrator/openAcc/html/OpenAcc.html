@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- site icon -->
+    <link rel="icon" href="images/fevicon.png" type="image/png" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- site css -->
+    <link rel="stylesheet" href="../style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <!-- color css -->
+    <link rel="stylesheet" href="../css/colors.css" />
+    <!-- select bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap-select.css" />
+    <!-- scrollbar css -->
+    <link rel="stylesheet" href="../css/perfect-scrollbar.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/custom.css" />
+    <!-- calendar file css -->
+    <link rel="stylesheet" href="../js/semantic.min.css" />
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="../js/openAccount.js"></script>       <!--路径根据实际情况要做出调整-->
+    <script src="../utils.js"></script>
+</head>
+<body class="inner_page widgets">
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- 左侧消息框  -->
+            <nav id="sidebar">
+                <div class="sidebar_blog_1">
+                    <div class="sidebar_user_info">
+                        <div class="icon_setting"></div>
+                        <div class="user_profle_side">
+                            <div class="user_img"><img class="img-responsive" src="../images/layout_img/user_img.jpg" alt="#" /></div>
+                            <div class="user_info">
+                                <h6>管理员</h6>
+                                <p><span class="online_animation"></span> Online</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar_blog_2">
+                    <h4>管理员</h4>
+                    <ul class="list-unstyled components">
+                        <li><a href="/Administrator/cardIdInput/html/cardIdInput.html"><i class="fa fa-map purple_color2"></i> <span>用户登录</span></a></li>
+                        <li><a href="/Administrator/openAcc/html/OpenAcc.html"><i class="fa fa-cog yellow_color"></i> <span>开户</span></a></li>
+                        <li><a href="/Administrator/cancelAcc/html/close_account.html"><i class="fa fa-cog yellow_color"></i> <span>销户</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end 左侧消息框 -->
+            <!-- 右侧内容 -->
+            <div id="content">
+                <!-- 顶部 -->
+                <div class="topbar">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="full">
+                            <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                            <div class="right_topbar">
+                                <div class="icon_info">
+                                    <ul class="user_profile_dd">
+                                        <li>
+                                            <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="../images/layout_img/user_img.jpg" alt="#" /><span class="name_user">管理员</span></a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="">个人介绍</a>
+                                                <a class="dropdown-item" href="/Administrator/administratorLogin/html/administratorLogin.html"><span>退出</span> <i class="fa fa-sign-out"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <!-- end 顶部 -->
+                <!-- 标题 -->
+                <div class="midde_cont">
+                    <div class="container-fluid">
+                        <div class="row column_title">
+                            <div class="col-md-12">
+                                <div class="page_title">
+                                    <h2>开户</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- row -->
+                        <div class="row column1">
+                            <div class="col-md-12">
+                                <div class="white_shd full margin_bottom_30">
+                                    <div class="full graph_head">
+                                        <div class="heading1 margin_0">
+                                            <h2><small> 填写用户个人信息 </small></h2>
+                                        </div>
+                                    </div>
+                                    <div class="full price_table padding_infor_info">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="table-responsive-sm">
+                                                    <table class="table table-striped projects">
+                                                        <thead class="thead-dark">
+                                                            <tr>
+                                                                <!--<th style="text-align: center; width: 10%">序号</th>-->
+                                                                <th style="text-align: center; width: 20%">属性</th>
+                                                                <th style="text-align: center; width: 60%">值</th>
+                                                                <th style="text-align: center; width: 10%">选项</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="t1">
+                                                            <tr>
+                                                                <!--<td style=" text-align:center">1</td>-->
+                                                                <td style=" text-align:center">
+                                                                    <a>姓名</a>
+                                                                </td>
+                                                                <td style=" text-align:center">
+                                                                    <input type="text" id="name" placeholder="请输入姓名" required style="width: 80%" />
+                                                                </td>
+                                                                <td style=" text-align:center;background-color:#0094ff" rowspan=4>
+                                                                    <button class="btn btn-success btn-xs" onclick="showCardID()">显<br />示<br />可<br />选<br />卡<br />号</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <!--<td style=" text-align:center">2</td>-->
+                                                                <td style=" text-align:center">
+                                                                    <a>身份ID</a>
+                                                                </td>
+                                                                <td style=" text-align:center">
+                                                                    <input type="text" id="identityID" placeholder="请输入身份ID" required style="width: 80%" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <!--<td style=" text-align:center">3</td>-->
+                                                                <td style=" text-align:center">
+                                                                    <a>邮箱</a>
+                                                                </td>
+                                                                <td style=" text-align:center">
+                                                                    <input type="text" id="Email" onchange="checkEmail()" placeholder="请输入邮箱" required style="width: 80%" />
+                                                                    <!--自己用js函数实现判断邮箱格式是否正确-->
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <!--<td style=" text-align:center">4</td>-->
+                                                                <td style=" text-align:center">
+                                                                    <a>电话</a>
+                                                                </td>
+                                                                <td style=" text-align:center">
+                                                                    <input type="text" id="phone" placeholder="请输入电话" required onchange="checkPhone()" style="width: 80%" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <!--<td style=" text-align:center">5</td>-->
+                                                                <td style=" text-align:center">
+                                                                    <a>可选卡号</a>
+                                                                </td>
+                                                                <td style=" text-align:center">
+                                                                    <select id="select1" />
+                                                                </td>
+
+                                                                <td style=" text-align:center;background-color:#0094ff" rowspan=4>
+                                                                    <button class="btn btn-success btn-xs" onclick="submit3()"><br />提<br />交<br />办<br />理<br /><br /></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <!--<td style=" text-align:center">8</td>-->
+                                                                <td style=" text-align:center">
+                                                                    <a>存款金额</a>
+                                                                </td>
+                                                                <td style=" text-align:center">
+                                                                    <input type="number" id="money" onchange="checkMoney()" placeholder="请输入存款金额" required style="width: 80%" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <!--<td style=" text-align:center">6</td>-->
+                                                                <td style=" text-align:center">
+                                                                    <a>设置密码</a>
+                                                                </td>
+                                                                <td style=" text-align:center">
+                                                                    <input type="password" id="password" placeholder="请设置密码" required style="width: 80%" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <!--<td style=" text-align:center">7</td>-->
+                                                                <td style=" text-align:center">
+                                                                    <a>确认密码</a>
+                                                                </td>
+                                                                <td style=" text-align:center">
+                                                                    <input type="password" id="confirmPassword" placeholder="请确认密码" required style="width: 80%" />
+                                                                </td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row -->
+                        </div>
+                    </div>
+                    <!-- end dashboard inner -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- wow animation -->
+    <script src="../js/animate.js"></script>
+    <!-- select country -->
+    <script src="../js/bootstrap-select.js"></script>
+    <!-- owl carousel -->
+    <script src="../js/owl.carousel.js"></script>
+    <!-- chart js -->
+    <script src="../js/Chart.min.js"></script>
+    <script src="../js/Chart.bundle.min.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/analyser.js"></script>
+    <!-- nice scrollbar -->
+    <script src="../js/perfect-scrollbar.min.js"></script>
+    <script>var ps = new PerfectScrollbar('#sidebar');</script>
+    <!-- custom js -->
+    <script src="../js/custom.js"></script>
+    <!-- calendar file css -->
+    <script src="../js/semantic.min.js"></script>
+    <script src="../../adminState.js"></script>
+    <script src="../../../人脸识别/face.js"></script>
+    <script>
+        if (!get_name("name")) {
+            window.location.href = "/Administrator/administratorLogin/html/administratorLogin.html";   //判断管理员是否登录
+            window.event.returnValue = false;  //判断管理员是否登录
+        }
+    </script>
+   
+</body>
+</html>

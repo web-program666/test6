@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>用户模板</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- site css -->
+    <link rel="stylesheet" href="../style.css" />
+    
+</head>
+<body class="inner_page widgets">
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- 左侧消息框  -->
+            <nav id="sidebar">
+                <div class="sidebar_blog_1">
+                    <div class="sidebar_user_info">
+                        <div class="icon_setting"></div>
+                        <div class="user_profle_side">
+                            <div class="user_img"><img class="img-responsive" src="../images/layout_img/msg2.png" alt="#" /></div>
+                            <div class="user_info">
+                                <h6>用户</h6>
+                                <p><span class="online_animation"></span> Online</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar_blog_2">
+                    <h4>用户</h4>
+                    <ul class="list-unstyled components">
+                        <li>
+                            <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-bar-chart-o green_color"></i> <span>用户信息</span></a>
+                            <ul class="collapse list-unstyled" id="element">
+                                <li><a href="/Administrator/setInformation/html/setInfo.html">> <span class="fa fa-table orange_color">基本信息</span></a></li>
+                                <li><a href="/Administrator/trading/html/trading.html">> <span class="fa fa-clock-o orange_color">交易信息</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/Administrator/operation/html/存款.html"><i class="fa fa-briefcase blue1_color"></i> <span>存款</span></a>
+                        </li>
+                        <li>
+                            <a href="/Administrator/operation/html/取款.html"><i class="fa fa-object-group blue2_color"></i> <span>取款</span></a>
+                        </li>
+                        <li>
+                            <a href="/Administrator/operation/html/转账.html"><i class="fa fa-paper-plane red_color"></i> <span>转账</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="/Administrator/cardIdInput/html/cardIdInput.html"><i class="fa fa-clone yellow_color"></i> <span>退出</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end 左侧消息框 -->
+            <!-- 右侧内容 -->
+            <div id="content">
+                <!-- 顶部 -->
+                <div class="topbar">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="full">
+                            <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                            <div class="right_topbar">
+                                <div class="icon_info">
+                                    <ul class="user_profile_dd">
+                                        <li>
+                                            <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="../images/layout_img/msg2.png" alt="#" /><span class="name_user">用户</span></a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="">个人介绍</a>
+                                                <a class="dropdown-item" href="/Administrator/administratorLogin/html/administratorLogin.html"><span>退出</span> <i class="fa fa-sign-out"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <!-- end 顶部 -->
+                <!-- 标题 -->
+                <div class="midde_cont">
+                    <div class="container-fluid">
+                        <div class="row column_title">
+                            <div class="col-md-12">
+                                <div class="page_title">
+                                    <h2>用户交易信息</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!--中间空白填充位置-->
+                        <div class="full padding_infor_info" style="border:1px solid #d4dadc">
+                            <div class="table_row">
+                                <div class="table-responsive">
+                                    <!--中间表-->
+                                    <table class="table table-striped" id="m">
+                                       
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--中间空白填充位置end-->
+        </div>
+</div>
+  
+    <!--对右上角按钮下拉的控制-->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/tradingInquiry.js"></script>
+    <script src="../../adminState.js"></script>
+
+    <script>
+        if (!get_cardId("cardId")) {
+            window.location.href = "/Administrator/cardIdInput/html/cardIdInput.html";   //判断用户是否登录
+            window.event.returnValue = false;
+        }
+        submit2()
+    </script>
+
+
+</body>
+</html>

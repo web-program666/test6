@@ -30,6 +30,7 @@ namespace WebApplication1.Administrator.administratorLogin
                 string password_sql = cmd.ExecuteScalar().ToString();
                 if (password == Convert.ToInt32(password_sql))
                 {
+                    setCookie(name);
                     Response.Write(1);   //账号密码正确，登录成功
                     Response.End();
                 }
@@ -40,6 +41,12 @@ namespace WebApplication1.Administrator.administratorLogin
                 }
             }
             conn.Close();
+        }
+        public void setCookie(string name)
+        {
+            HttpCookie newCookie = new HttpCookie("name");
+            newCookie.Value = name;
+            Response.AppendCookie(newCookie);
         }
     }
 }

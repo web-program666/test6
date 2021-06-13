@@ -43,7 +43,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AipSdk, Version=3.6.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Baidu.AI.3.6.14\lib\net45\AipSdk.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -69,14 +76,172 @@
   <ItemGroup>
     <Content Include="Administrator\administratorLogin\aspx\administratorLogin.aspx" />
     <Content Include="Administrator\administratorLogin\aspx\AdminLog.aspx" />
+    <Content Include="Administrator\administratorLogin\css\fontawesome-all.css" />
     <Content Include="Administrator\administratorLogin\html\administratorLogin.html" />
     <Content Include="Administrator\administratorLogin\css\font-awesome-4.7.0\css\font-awesome.min.css" />
     <Content Include="Administrator\administratorLogin\css\style.css" />
     <Content Include="Administrator\administratorLogin\images\bg.png" />
     <Content Include="Administrator\administratorLogin\js\administratorLogin.js" />
     <Content Include="Administrator\administratorLogin\js\administratorLogin1.js" />
+    <Content Include="Administrator\administratorLogin\js\canva_moving_effect.js" />
     <Content Include="Administrator\administratorLogin\js\index.js" />
+    <Content Include="Administrator\administratorLogin\js\jquery-3.3.1.min.js" />
     <Content Include="Administrator\administratorLogin\js\jquery.min.js" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-brands-400.svg" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-regular-400.svg" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-solid-900.svg" />
+    <Content Include="Administrator\adminState.js" />
+    <Content Include="Administrator\cancelAcc\aspx\cancelAcc.aspx" />
+    <Content Include="Administrator\cancelAcc\css\bootstrap.min.css" />
+    <Content Include="Administrator\cancelAcc\css\close_account.css" />
+    <Content Include="Administrator\cancelAcc\css\font-awesome.css" />
+    <Content Include="Administrator\cancelAcc\css\font-awesome.min.css" />
+    <Content Include="Administrator\cancelAcc\fonts\flaticon.css" />
+    <Content Include="Administrator\cancelAcc\fonts\flaticon.html" />
+    <Content Include="Administrator\cancelAcc\fonts\Flaticon.svg" />
+    <Content Include="Administrator\cancelAcc\fonts\fontawesome-webfont.svg" />
+    <Content Include="Administrator\cancelAcc\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Administrator\cancelAcc\html\close_account.html" />
+    <Content Include="Administrator\cancelAcc\images\layout_img\msg2.png" />
+    <Content Include="Administrator\cancelAcc\images\layout_img\user_img.jpg" />
+    <Content Include="Administrator\cancelAcc\images\location.png" />
+    <Content Include="Administrator\cancelAcc\js\bootstrap.min.js" />
+    <Content Include="Administrator\cancelAcc\js\cancellation.js" />
+    <Content Include="Administrator\cancelAcc\js\jquery.min.js" />
+    <Content Include="Administrator\cancelAcc\style.css" />
+    <Content Include="Administrator\cardIdInput\aspx\cardIdInput.aspx" />
+    <Content Include="Administrator\cardIdInput\css\bootstrap.min.css" />
+    <Content Include="Administrator\cardIdInput\css\close_account.css" />
+    <Content Include="Administrator\cardIdInput\css\enter_style.css" />
+    <Content Include="Administrator\cardIdInput\css\font-awesome.css" />
+    <Content Include="Administrator\cardIdInput\css\font-awesome.min.css" />
+    <Content Include="Administrator\cardIdInput\html\cardIdInput.html" />
+    <Content Include="Administrator\cardIdInput\images\adm.png" />
+    <Content Include="Administrator\cardIdInput\images\avtar.png" />
+    <Content Include="Administrator\cardIdInput\images\layout_img\msg2.png" />
+    <Content Include="Administrator\cardIdInput\images\layout_img\user_img.jpg" />
+    <Content Include="Administrator\cardIdInput\images\location.png" />
+    <Content Include="Administrator\cardIdInput\js\bootstrap.min.js" />
+    <Content Include="Administrator\cardIdInput\js\cardIdInput.js" />
+    <Content Include="Administrator\cardIdInput\js\jquery.min.js" />
+    <Content Include="Administrator\cardIdInput\style.css" />
+    <Content Include="Administrator\openAcc\js\openAccount.js" />
+    <Content Include="Administrator\operation\ASPX\deposit.aspx" />
+    <Content Include="Administrator\operation\ASPX\transfer.aspx" />
+    <Content Include="Administrator\operation\ASPX\withdraw.aspx" />
+    <Content Include="Administrator\operation\css\bootstrap.min.css" />
+    <Content Include="Administrator\operation\css\font-awesome.css" />
+    <Content Include="Administrator\operation\css\font-awesome.min.css" />
+    <Content Include="Administrator\operation\html\取款.html" />
+    <Content Include="Administrator\operation\html\存款.html" />
+    <Content Include="Administrator\operation\html\转账.html" />
+    <Content Include="Administrator\operation\images\1.png" />
+    <Content Include="Administrator\operation\images\layout_img\msg2.png" />
+    <Content Include="Administrator\operation\images\layout_img\user_img.jpg" />
+    <Content Include="Administrator\operation\js\bootstrap.min.js" />
+    <Content Include="Administrator\operation\js\deposit.js" />
+    <Content Include="Administrator\operation\js\jquery.min.js" />
+    <Content Include="Administrator\operation\js\transfer.js" />
+    <Content Include="Administrator\operation\js\withdraw.js" />
+    <Content Include="Administrator\operation\style.css" />
+    <Content Include="Administrator\operation\welcome\css\aos.css" />
+    <Content Include="Administrator\operation\welcome\css\bootstrap.css" />
+    <Content Include="Administrator\operation\welcome\css\circles.css" />
+    <Content Include="Administrator\operation\welcome\css\easy-responsive-tabs.css" />
+    <Content Include="Administrator\operation\welcome\css\flexslider.css" />
+    <Content Include="Administrator\operation\welcome\css\font-awesome.css" />
+    <Content Include="Administrator\operation\welcome\css\style.css" />
+    <Content Include="Administrator\operation\welcome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Administrator\operation\welcome\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Administrator\operation\welcome\html\welcome.html" />
+    <Content Include="Administrator\operation\welcome\images\services-bg.jpg" />
+    <Content Include="Administrator\operation\welcome\images\services1.png" />
+    <Content Include="Administrator\operation\welcome\js\aos.js" />
+    <Content Include="Administrator\operation\welcome\js\aosindex.js" />
+    <Content Include="Administrator\operation\welcome\js\bootstrap.js" />
+    <Content Include="Administrator\operation\welcome\js\circles.js" />
+    <Content Include="Administrator\operation\welcome\js\easing.js" />
+    <Content Include="Administrator\operation\welcome\js\jquery-2.1.4.min.js" />
+    <Content Include="Administrator\operation\welcome\js\jquery.flexslider.js" />
+    <Content Include="Administrator\operation\welcome\js\jzBox.js" />
+    <Content Include="Administrator\operation\welcome\js\launcher.js" />
+    <Content Include="Administrator\operation\welcome\js\main.js" />
+    <Content Include="Administrator\operation\welcome\js\move-top.js" />
+    <Content Include="Administrator\operation\welcome\js\slideshow.min.js" />
+    <Content Include="Administrator\photo\getPhoto.js" />
+    <Content Include="Administrator\photo\photo.aspx" />
+    <Content Include="Administrator\openAcc\css\bootstrap.min.css" />
+    <Content Include="Administrator\openAcc\css\font-awesome.css" />
+    <Content Include="Administrator\openAcc\css\font-awesome.min.css" />
+    <Content Include="Administrator\openAcc\fonts\flaticon.css" />
+    <Content Include="Administrator\openAcc\fonts\flaticon.html" />
+    <Content Include="Administrator\openAcc\fonts\Flaticon.svg" />
+    <Content Include="Administrator\openAcc\fonts\fontawesome-webfont.svg" />
+    <Content Include="Administrator\openAcc\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Administrator\openAcc\images\landing_page\stack-of-three-black-hot-stones-spa-salon-vector-16122479.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\american-express.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\bg1.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\error.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\g1.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g10.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g11.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g12.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g13.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g14.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g15.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g16.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g2.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g3.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g4.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g5.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g6.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g7.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g8.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\g9.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\login_image.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\map_icon.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\mastercard.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\msg1.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\msg2.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\msg3.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\msg4.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\msg5.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\pattern.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\pattern_h.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\paypal.png" />
+    <Content Include="Administrator\openAcc\images\layout_img\user_img.jpg" />
+    <Content Include="Administrator\openAcc\images\layout_img\visa.png" />
+    <Content Include="Administrator\openAcc\images\logo\logo.png" />
+    <Content Include="Administrator\openAcc\images\logo\logo_black.png" />
+    <Content Include="Administrator\openAcc\images\logo\logo_icon.png" />
+    <Content Include="Administrator\openAcc\js\bootstrap.min.js" />
+    <Content Include="Administrator\openAcc\js\jquery.min.js" />
+    <Content Include="Administrator\openAcc\aspx\OpenAccount.aspx" />
+    <Content Include="Administrator\openAcc\html\OpenAcc.html" />
+    <Content Include="Administrator\openAcc\style.css" />
+    <Content Include="Administrator\openAcc\utils.js" />
+    <Content Include="Administrator\setInformation\aspx\setInformation.aspx" />
+    <Content Include="Administrator\setInformation\css\bootstrap.min.css" />
+    <Content Include="Administrator\setInformation\css\font-awesome.css" />
+    <Content Include="Administrator\setInformation\css\font-awesome.min.css" />
+    <Content Include="Administrator\setInformation\html\setInfo.html" />
+    <Content Include="Administrator\setInformation\images\layout_img\msg2.png" />
+    <Content Include="Administrator\setInformation\images\layout_img\user_img.jpg" />
+    <Content Include="Administrator\setInformation\js\bootstrap.min.js" />
+    <Content Include="Administrator\setInformation\js\jquery.min.js" />
+    <Content Include="Administrator\setInformation\js\setInfor.js" />
+    <Content Include="Administrator\setInformation\style.css" />
+    <Content Include="Administrator\trading\aspx\tradingInquiry.aspx" />
+    <Content Include="Administrator\trading\css\bootstrap.min.css" />
+    <Content Include="Administrator\trading\css\font-awesome.css" />
+    <Content Include="Administrator\trading\css\font-awesome.min.css" />
+    <Content Include="Administrator\trading\html\trading.html" />
+    <Content Include="Administrator\trading\images\layout_img\msg2.png" />
+    <Content Include="Administrator\trading\images\layout_img\user_img.jpg" />
+    <Content Include="Administrator\trading\js\bootstrap.min.js" />
+    <Content Include="Administrator\trading\js\jquery.min.js" />
+    <Content Include="Administrator\trading\js\tradingInquiry.js" />
+    <Content Include="Administrator\trading\style.css" />
     <Content Include="User\accFreeze\aspx\accFreeze.aspx" />
     <Content Include="User\accFreeze\js\accFreeze.js" />
     <Content Include="User\deposit\ASPX\deposit.aspx" />
@@ -164,6 +329,11 @@
     <Content Include="User\withdraw\images\services-bg.jpg" />
     <Content Include="User\withdraw\js\withdraw.js" />
     <Content Include="Web.config" />
+    <Content Include="人脸识别\face.js" />
+    <Content Include="人脸识别\faceContrast.html" />
+    <Content Include="人脸识别\Reg.html" />
+    <Content Include="人脸识别\savePic.aspx" />
+    <Content Include="人脸识别\图片2.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrator\administratorLogin\aspx\administratorLogin.aspx.cs">
@@ -179,6 +349,70 @@
     </Compile>
     <Compile Include="Administrator\administratorLogin\aspx\AdminLog.aspx.designer.cs">
       <DependentUpon>AdminLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\cancelAcc\aspx\cancelAcc.aspx.cs">
+      <DependentUpon>cancelAcc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\cancelAcc\aspx\cancelAcc.aspx.designer.cs">
+      <DependentUpon>cancelAcc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\cardIdInput\aspx\cardIdInput.aspx.cs">
+      <DependentUpon>cardIdInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\cardIdInput\aspx\cardIdInput.aspx.designer.cs">
+      <DependentUpon>cardIdInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\EMAIL.cs" />
+    <Compile Include="Administrator\operation\ASPX\deposit.aspx.cs">
+      <DependentUpon>deposit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\operation\ASPX\deposit.aspx.designer.cs">
+      <DependentUpon>deposit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\operation\ASPX\transfer.aspx.cs">
+      <DependentUpon>transfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\operation\ASPX\transfer.aspx.designer.cs">
+      <DependentUpon>transfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\operation\ASPX\withdraw.aspx.cs">
+      <DependentUpon>withdraw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\operation\ASPX\withdraw.aspx.designer.cs">
+      <DependentUpon>withdraw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\photo\photo.aspx.cs">
+      <DependentUpon>photo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\photo\photo.aspx.designer.cs">
+      <DependentUpon>photo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\openAcc\aspx\OpenAccount.aspx.cs">
+      <DependentUpon>OpenAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\openAcc\aspx\OpenAccount.aspx.designer.cs">
+      <DependentUpon>OpenAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\setInformation\aspx\setInformation.aspx.cs">
+      <DependentUpon>setInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\setInformation\aspx\setInformation.aspx.designer.cs">
+      <DependentUpon>setInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\trading\aspx\tradingInquiry.aspx.cs">
+      <DependentUpon>tradingInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\trading\aspx\tradingInquiry.aspx.designer.cs">
+      <DependentUpon>tradingInquiry.aspx</DependentUpon>
     </Compile>
     <Compile Include="EMAIL.cs" />
     <Compile Include="User\accFreeze\aspx\accFreeze.aspx.cs">
@@ -241,12 +475,78 @@
     <Compile Include="User\withdraw\aspx\withdraw.aspx.designer.cs">
       <DependentUpon>withdraw.aspx</DependentUpon>
     </Compile>
+    <Compile Include="人脸识别\AccessToken.cs" />
+    <Compile Include="人脸识别\FaceMatch.cs" />
+    <Compile Include="人脸识别\savePic.aspx.cs">
+      <DependentUpon>savePic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="人脸识别\savePic.aspx.designer.cs">
+      <DependentUpon>savePic.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrator\administratorLogin\css\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="Administrator\administratorLogin\css\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
     <Content Include="Administrator\administratorLogin\css\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
     <Content Include="Administrator\administratorLogin\css\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Administrator\openAcc\fonts\Flaticon.eot" />
+    <Content Include="Administrator\openAcc\fonts\Flaticon.ttf" />
+    <Content Include="Administrator\openAcc\fonts\Flaticon.woff" />
+    <Content Include="Administrator\openAcc\fonts\fontawesome-webfont.eot" />
+    <Content Include="Administrator\openAcc\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Administrator\openAcc\fonts\fontawesome-webfont.woff" />
+    <Content Include="Administrator\openAcc\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Administrator\openAcc\fonts\FontAwesome.otf" />
+    <Content Include="Administrator\openAcc\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Administrator\openAcc\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Administrator\openAcc\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Administrator\openAcc\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Administrator\openAcc\fonts\_flaticon.scss" />
+    <Content Include="Administrator\openAcc\js\bootstrap.min.js.map" />
+    <Content Include="Administrator\cancelAcc\fonts\Flaticon.eot" />
+    <Content Include="Administrator\cancelAcc\fonts\Flaticon.ttf" />
+    <Content Include="Administrator\cancelAcc\fonts\Flaticon.woff" />
+    <Content Include="Administrator\cancelAcc\fonts\fontawesome-webfont.eot" />
+    <Content Include="Administrator\cancelAcc\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Administrator\cancelAcc\fonts\fontawesome-webfont.woff" />
+    <Content Include="Administrator\cancelAcc\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Administrator\cancelAcc\fonts\FontAwesome.otf" />
+    <Content Include="Administrator\cancelAcc\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Administrator\cancelAcc\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Administrator\cancelAcc\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Administrator\cancelAcc\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Administrator\cancelAcc\fonts\_flaticon.scss" />
+    <Content Include="Administrator\cancelAcc\js\bootstrap.min.js.map" />
+    <Content Include="Administrator\setInformation\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Administrator\setInformation\js\bootstrap.min.js.map" />
+    <Content Include="Administrator\cardIdInput\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Administrator\cardIdInput\js\bootstrap.min.js.map" />
+    <Content Include="Administrator\trading\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Administrator\trading\js\bootstrap.min.js.map" />
+    <Content Include="Administrator\operation\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Administrator\operation\js\bootstrap.min.js.map" />
+    <Content Include="Administrator\operation\welcome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Administrator\operation\welcome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Administrator\operation\welcome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Administrator\operation\welcome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Administrator\operation\welcome\fonts\FontAwesome.otf" />
+    <Content Include="Administrator\operation\welcome\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Administrator\operation\welcome\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Administrator\operation\welcome\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Administrator\operation\welcome\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-brands-400.eot" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-brands-400.ttf" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-brands-400.woff" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-brands-400.woff2" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-regular-400.eot" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-regular-400.ttf" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-regular-400.woff" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-regular-400.woff2" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-solid-900.eot" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-solid-900.ttf" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-solid-900.woff" />
+    <Content Include="Administrator\administratorLogin\webfonts\fa-solid-900.woff2" />
     <None Include="packages.config" />
     <Content Include="User\userOperation\fonts\fontawesome-webfont.eot" />
     <Content Include="User\userOperation\fonts\fontawesome-webfont.ttf" />
@@ -274,7 +574,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="loginState\" />
+    <Folder Include="Administrator\openAcc\images\loader\" />
     <Folder Include="User\tradingInquiry\css\" />
     <Folder Include="User\tradingInquiry\images\" />
     <Folder Include="User\userInfo\css\" />

@@ -99,7 +99,7 @@ function submit() {     //ajax传表单
 function result(flag) {
     if (flag == 1) {
         alert("登陆成功！");
-        window.location.href = "#"; //跳转到管理员操作界面
+        window.location.href = "/Administrator/cardIdInput/html/cardIdInput.html"; //跳转到管理员操作界面
     }
     else if (flag == -1) {
         alert("账户不存在!");

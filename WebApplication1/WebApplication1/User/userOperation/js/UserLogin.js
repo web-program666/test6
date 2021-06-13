@@ -32,8 +32,6 @@ function isNumber(value) {         //验证是否为数字
 
 }
 
-
-
 function cookies() {      //记住密码
     //var oForm = document.getElementsById("button");
     var oUser = document.getElementById('cardId');
@@ -68,7 +66,7 @@ function cookies() {      //记住密码
     }
 }
 //设置cookie
-function setCookie(name, value, day,isLogin) {
+function setCookie(name, value, day) {
     var date = new Date();
     date.setDate(date.getDate() + day);
     document.cookie = name + '=' + value + ';expires=' + date;

@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--销户框格式-->
+    <link href="../css/close_account.css" rel='stylesheet' type='text/css' />
+    <!--上侧按钮栏的格式控制 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- 对整个页面的css的控制 -->
+    <link rel="stylesheet" href="../style.css" />
+
+</head>
+<body class="inner_page widgets">
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- 左侧消息框  -->
+            <nav id="sidebar">
+                <div class="sidebar_blog_1">
+                    <div class="sidebar_user_info">
+                        <div class="icon_setting"></div>
+                        <div class="user_profle_side">
+                            <div class="user_img"><img class="img-responsive" src="../images/layout_img/user_img.jpg" alt="#" /></div>
+                            <div class="user_info">
+                                <h6>管理员</h6>
+                                <p><span class="online_animation"></span> Online</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar_blog_2">
+                    <h4>管理员</h4>
+                    <ul class="list-unstyled components">
+                        <li><a href="/Administrator/cardIdInput/html/cardIdInput.html"><i class="fa fa-map purple_color2"></i> <span>用户登录</span></a></li>
+                        <li><a href="/Administrator/openAcc/html/OpenAcc.html"><i class="fa fa-cog yellow_color"></i> <span>开户</span></a></li>
+                        <li><a href="/Administrator/cancelAcc/html/close_account.html"><i class="fa fa-cog yellow_color"></i> <span>销户</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end 左侧消息框 -->
+            <!-- 右侧内容 -->
+            <div id="content">
+                <!-- 顶部 -->
+                <div class="topbar">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="full">
+                            <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                            <div class="right_topbar">
+                                <div class="icon_info">
+                                    <ul class="user_profile_dd">
+                                        <li>
+                                            <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="../images/layout_img/user_img.jpg" alt="#" /><span class="name_user">管理员</span></a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="">个人介绍</a>
+                                                <a class="dropdown-item" href="/Administrator/administratorLogin/html/administratorLogin.html"><span>退出</span> <i class="fa fa-sign-out"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <!-- end 顶部 -->
+                <!-- 标题 -->
+                <div class="midde_cont">
+                    <div class="container-fluid">
+                        <div class="row column_title">
+                            <div class="col-md-12">
+                                <div class="page_title">
+                                    <h2>销户</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!--销户界面-->
+                        <div class="app-location" style="width:600px;padding-bottom:10px;padding-top:0px">
+                            <h2>请进行销户操作</h2>
+                            <!--<div class="line"><span></span></div>-->
+                            <div class="location"><img src="../images/location.png" class="img-responsive" alt="" style="width:150px;margin-top:0;margin-bottom:0" /></div>
+                            <form>
+                                <input id="card" type="text" class="text" value="卡号" onfocus="this.value = '';" />
+                                <input id="password" type="text" value="卡密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+                                <div class="submit"><input id="submit" type="button" onclick="cancel()" value="确认销户" style="padding-top:10px;padding-bottom:10px;width:396px"></div>
+                                <div class="clear"></div>
+
+                            </form>
+                        </div>
+                        <!--销户界面end-->
+
+                    </div>
+                </div>
+                <!-- end dashboard inner -->
+            </div>
+        </div>
+    </div>
+
+    <!--对右上角按钮下拉的控制-->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/cancellation.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="/Administrator/adminState.js"></script>
+    <script>
+        if (!get_name("name")) {
+            window.location.href = "/Administrator/administratorLogin/html/administratorLogin.html";   //判断管理员是否登录
+            window.event.returnValue = false;  //判断管理员是否登录
+        }
+    </script>
+
+</body>
+</html>

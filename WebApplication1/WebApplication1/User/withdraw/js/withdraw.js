@@ -12,7 +12,7 @@
             }
         }
         //用AJAX技术将数据传回后台
-        var data = "password=" + password + "&withdraw=" + withdraw + "&email=" + value + "&cardId1=" + cardId;
+        var data = "password=" + password + "&withdraw=" + withdraw + "&email=" + value + "&cardId=" + cardId;
         var xht = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
         xht.open("POST", "../aspx/withdraw.aspx", false);
         xht.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
