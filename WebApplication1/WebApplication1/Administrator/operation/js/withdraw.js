@@ -4,7 +4,7 @@
         var cardId = get_cardId("cardId");
         var password = document.getElementById("password").value;
         var withdraw = document.getElementById("withdraw").value;
-        var value = 1;
+        var value ="yes";
         //用AJAX技术将数据传回后台
         var data = "password=" + password + "&withdraw=" + withdraw + "&email=" + value + "&cardId=" + cardId;
         var xht = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');

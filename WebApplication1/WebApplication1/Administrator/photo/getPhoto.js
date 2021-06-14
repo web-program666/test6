@@ -1,5 +1,5 @@
 ﻿function get_photo() {
-    var cardId = "1";  //用户cardId
+    var cardId = get_cardId("cardId");
     var xht = new XMLHttpRequest();
     var form = new FormData();
     form.append("cardId", cardId);

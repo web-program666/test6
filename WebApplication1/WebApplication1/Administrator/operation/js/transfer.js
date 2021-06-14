@@ -4,7 +4,7 @@
         var password = document.getElementById("password").value;
         var transferAmount = document.getElementById("transfer_money").value;
         var cardID2 = document.getElementById("transfer_account").value;
-        var value=1;
+        var value="yes";
         var data = "password=" + password + "&transferAmount=" + transferAmount + "&cardID2=" + cardID2 + "&email=" + value + "&cardID1=" + cardID1;
         var xht = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft XMLHTTP");
         xht.open("POST", "../aspx/transfer.aspx", false);

@@ -251,6 +251,7 @@
     <Content Include="User\deposit\images\services-bg.jpg" />
     <Content Include="User\deposit\js\deposit.js" />
     <Content Include="User\show\aspx\show.aspx" />
+    <Content Include="User\tradingInquiry\html\bann1.jpg" />
     <Content Include="User\tradingInquiry\js\jquery.min.js" />
     <Content Include="User\welcome\css\aos.css" />
     <Content Include="User\welcome\css\bootstrap.css" />
@@ -286,7 +287,6 @@
     <Content Include="User\transfer\js\transfer.js" />
     <Content Include="User\userInfo\aspx\userInfo.aspx" />
     <Content Include="User\tradingInquiry\aspx\tradingInquiry.aspx" />
-    <Content Include="User\tradingInquiry\html\bann1.jpg" />
     <Content Include="User\tradingInquiry\html\tradingInquiry.html" />
     <Content Include="User\tradingInquiry\js\tradingInquiry.js" />
     <Content Include="User\userInfo\html\information.html" />

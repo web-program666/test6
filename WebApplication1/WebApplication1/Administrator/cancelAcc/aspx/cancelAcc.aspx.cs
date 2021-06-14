@@ -7,6 +7,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 
 namespace cancellation
 {
@@ -17,7 +18,7 @@ namespace cancellation
             //获取前端的值
             var Id = Request["card"];
             var pass = Request["password"];
-
+            var path = @"C:\Users\Lenovo\Desktop\WebPic\" + Id + "0.png";
 
             //建立数据库连接
             SqlConnection conn = new SqlConnection(@"server =.; user id = sa; password =123456; database = Web");
@@ -53,7 +54,10 @@ namespace cancellation
                     cmd1.ExecuteNonQuery();
                     SqlCommand cmd2 = new SqlCommand(sql2, conn);
                     cmd2.ExecuteNonQuery();
-
+                    if (File.Exists(path) == true)
+                    {
+                        File.Delete(path);   //删除用户图片
+                    }
                     Response.Write("您已在本行成功销户!相关邮件已发送至您的邮箱");
                     SendEmail(mail, "销户", "您已成功在本行销户!");
                 }

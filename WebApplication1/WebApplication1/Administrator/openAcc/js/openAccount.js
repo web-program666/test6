@@ -53,7 +53,7 @@ function submit3() {
                         reset("t1", "input");
                         document.getElementById("select1").options.length = 0;    //清空
                         alert(xht1.responseText);
-                        window.location.href = "/人脸识别/Reg.html?cardId=" + selCardID;
+                        if (xht1.responseText.substring(0,6)=="办理开户成功") window.location.href = "/人脸识别/Reg.html?cardId=" + selCardID;
                     }
                 }
         }

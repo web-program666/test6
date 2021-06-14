@@ -94,6 +94,7 @@ namespace BANK.openAccount
                     myComm.ExecuteNonQuery();
                     myTran.Commit();              //事务提交
                     EMAIL.SendEmail(Email, "银行开户", "您刚刚已在本行办理了银行开户\r\n卡号为：" + selCardID + "\r\n余额为："+ money+"元"+"\r\n卡密码为："+confirmPassword+"\r\n开户时间为："+time);
+                    setCookie(selCardID);
                     Response.Write("办理开户成功，用户卡号为:  " + selCardID);
                 }
                 catch (Exception ex)
@@ -142,6 +143,11 @@ namespace BANK.openAccount
             }
             return false;
         }
+        public void setCookie(string cardId)
+        {
+            HttpCookie newCookie = new HttpCookie("cardId");
+            newCookie.Value = cardId;
+            Response.AppendCookie(newCookie);
+        }
     }
-
 }

@@ -3,7 +3,7 @@
         var cardId = get_cardId("cardId");
         var depo_amount = document.getElementById("deposit").value;
         var password = document.getElementById("password").value;
-        var value = 1;  //默认发送邮件
+        var value ="yes";  //默认发送邮件
         var data = "depo_amount=" + depo_amount + "&password=" + password + "&email=" + value + "&cardId="+cardId;
         var xht = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
         xht.open("POST", "../aspx/deposit.aspx", false);
