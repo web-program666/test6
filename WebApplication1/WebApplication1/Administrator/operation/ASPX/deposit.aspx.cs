@@ -80,8 +80,8 @@ namespace Deposit1
         {
             // 设置发送方的邮件信息,例如使用网易的smtp
             string smtpServer = "smtp.qq.com"; //SMTP服务器
-            string mailFrom = "2652620859@qq.com"; //登陆用户名
-            string userPassword = "zteqjyuesrtodifa";//登陆密码-新版之后的QQ邮箱都是使用授权码,需要到邮箱-设置-账户里面找到-生成授权码-复制进来
+            string mailFrom = "xxxxxxxxxx@qq.com"; //登陆用户名
+            string userPassword = "xxxxxxxxxx";//登陆密码-新版之后的QQ邮箱都是使用授权码,需要到邮箱-设置-账户里面找到-生成授权码-复制进来
 
             // 邮件服务设置
             SmtpClient smtpClient = new SmtpClient();
