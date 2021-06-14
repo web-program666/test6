@@ -79,8 +79,8 @@ namespace WebApplication1.人脸识别
         }
         public static string demo(string Url1, string Url2)
         {
-            var API_KEY = "XteMhlIhTDUXHYD4c70soa1q"; //百度注册账号的apikey
-            var SECRET_KEY = "IEG7TSHDNxouaGrVbgupkbLz8o0zoGrn"; //百度注册账号的secretkey
+            var API_KEY = "xxxxxxxxxxxx"; //百度注册账号的apikey
+            var SECRET_KEY = "xxxxxxxxxxxx"; //百度注册账号的secretkey
             var client = new Baidu.Aip.Face.Face(API_KEY, SECRET_KEY);
             var faces = new JArray
     {
